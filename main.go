@@ -1,3 +1,7 @@
+// Tiny log merging tool. Suitable for merging multiple log files of different size. Reads streams, so should not use a lot of RAM.
+// Logs are merged based on parsed timestamp, so it must be the same in all input files.
+// You should provide '-ts' timestamp format that corresponds the one in your logs. Default is: 'Jan 2 15:04:05'.
+// Please refer to time package documentation for more info. https://golang.org/pkg/time/#pkg-constants
 package main
 
 import (
