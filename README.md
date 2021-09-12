@@ -1,14 +1,14 @@
 # logmerge
-Tiny tool for merging multiple log files. Reads stream, so should not use a lot of RAM.
-Logs are merged based on parsed timestamp. You should provide `-ts` timestamp that corresponds the one in your logs.
-Default is: `Jan  2 15:04:05`.
+Tiny tool for merging multiple log files. Reads stream, so should not use a lot of RAM.  
+Logs are merged based on parsed timestamp. You should provide `-ts` timestamp format that corresponds to the one in your logs.
+The default is: `Jan  2 15:04:05`.  
+
 Please refer to time package documentation for more info.
 https://golang.org/pkg/time/#pkg-constants
 
-Tested with 3x12GB log files.
+Tested with 3x12GB log files.  
 
-Example files:
-
+Example:  
 File #1
 ```
 Aug  1 00:13:58 Preparation is finished. Wish us good luck.
@@ -45,8 +45,8 @@ Oct  20 18:44:08 Today is my birthday, and I am afraid that it is my last birthd
 `go get github.com/cooldarkdryplace/logmerge`
 
 ## Usage
-`logmerge -i your_input_directory -o output.file -tf Jan  2 15:04:05`
+`logmerge -i your_input_directory -o output.file -tf Jan  2 15:04:05`  
 
-`-i` Input directory. Place where multiple files are located. All files considered to be logs.
-`-o` Output file. Merge result.
-`-ts` Time format of your timestamps. Example: `Jan  2 15:04:05`.
+`-i`  Input directory. Place where multiple files are located. All files considered to be logs.  
+`-o`  Output file. Merge result.  
+`-ts` Time format of your timestamps. Example: `Jan  2 15:04:05`.  
